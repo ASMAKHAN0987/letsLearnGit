@@ -34,7 +34,7 @@ let count = 0;
 rps.forEach((element) => {
   // let count=0;
   element.addEventListener("click", (event) => {
-    console.log("count is now", count++);
+    count++;
     innerDiv = document.createElement("div");
     innerDiv.classList.add("innerDiv");
     let userChoice = userTurn(element);
@@ -84,7 +84,6 @@ function whoWins(userChoice, computerChoice, user, computer) {
     status.textContent = "Computer Win";
   } else {
     status.textContent = "Tie";
-  }console.log("count in winner block: ",count);
   if(count == 4){
   return computerScore > userScore
     ? "Computer Is Winner 🏆"
