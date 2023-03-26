@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background: #ccc;
+        position: relative;
+      }
+      #resultRestart{
+        position: relative;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border:1px solid black;
+        position: absolute;
+        width:100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* opacity: 0; */
+      }
+      #mainDiv{
+        position: absolute;
+        top:-100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border:1px solid black;
+        width:50%;
+        height:300px;
+        background-color: #ccc;
+        opacity: 0;
+        transition: all 0.5s;
+      }
+      #mainDiv h1{
+        margin-bottom: 30px;
+      }
+      #mainDiv button{
+        font-size: 30px;
+        color:white;
+        font-weight: bold;
+        padding:15px 50px;
+        cursor: pointer;
+        background-color:  hsl(200,100%,50%);
+        border: 3px solid hsl(200,100% , 30%);
+      }
+      #mainDiv button:hover{
+        background-color: green;
+        border:3px solid green;
+      }
+      #rock {
+      }
+      #paper {
+      }
+      #scissor {
+      }
+      #container {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+      }
+      .rps {
+        background-color: #ccc;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 80px;
+        transition: all 0.5s;
+      }
+      .rps:hover {
+        font-size: 100px;
+      }
+     #container button {
+        width: 100px;
+        height: 100px;
+      }
+      #result {
+        margin-top: 50px;
+        display: flex;
+        gap: 50px;
+        justify-content: space-evenly;
+      }
+      #result h2 {
+        font-size: 40px;
+      }
+      .divCon {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        width: 350px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+      }
+      .innerDiv {
+        display: flex;
+        justify-content: space-between;
+        width: 350px;
+        margin-bottom: 20px;
+        font-size: 40px;
+      }
+      .lose{
+        opacity:0.4;
+      }
+      #userScore,#computerScore{
+        font-size: 30px;
+      }
+      #status{
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 25px;
+        color:darkgreen;
+      }
+      .winner{
+        font-size: 50px;
+        opacity: 1;
+      }
+      .hide{
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="resultRestart" class="hide">
+         <div id="mainDiv">
+            <h1>Computer Is Winner 🏆</h1>
+            <button id="btnRestart">Restart</button>
+         </div>
+    </div>
+    <div id="container">
+      <button id="rock" class="rps" dataset="0">✊</button>
+      <button id="paper" class="rps" dataset="1">✋</button>
+      <button id="scissor" class="rps" dataset="2">✌️</button>
+    </div>
+    <div id="result">
+      <h2>You <span id="userScore">0</span></h2>
+      <h2>Computer <span id="computerScore">0</span></h2>
+    </div>
+    <div><h2 id="status">start to win</h2></div>
+    <script src="temp.js "></script>
+  </body>
+</html>
