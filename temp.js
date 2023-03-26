@@ -84,6 +84,7 @@ function whoWins(userChoice, computerChoice, user, computer) {
     status.textContent = "Computer Win";
   } else {
     status.textContent = "Tie";
+  }
   if(count == 4){
   return computerScore > userScore
     ? "Computer Is Winner 🏆"
