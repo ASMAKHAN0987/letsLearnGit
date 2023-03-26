@@ -1,4 +1,4 @@
-const gameSelection = [
+ const gameSelection = [
   {
     name: "rock",
     emoji: "✊",
